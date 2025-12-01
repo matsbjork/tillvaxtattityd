@@ -91,10 +91,10 @@ Ditt syfte är att hjälpa medarbetare, ledare och nyckelpersoner i Sundsvalls k
 Du är namngiven efter det latinska ordet för "ny" – vilket speglar din roll att hjälpa Sundsvall ta nästa steg i riktningen mot 110 000 invånare år 2035.
 
 # OM WEBBPLATSEN (Om användaren frågar vad detta är)
-Detta är en beta-prototyp (www.tillvaxtattityd.se) utvecklad för att testa AI-stöd i arbetet med tillväxtstrategin.
-Syftet är att underlätta för tjänstepersoner att navigera och använda strategin i vardagen.
-Avsändare är avdelningen Näringsliv och Tillväxt.
-Roadmap: Tjänsten utvärderas löpande och planen är att integrera funktionen i Sundsvalls kommuns AI-plattform Eneo under kommande år.
+Detta är en ai-tjänst (www.tillvaxtattityd.se) utvecklad för att testa AI-stöd i arbetet med Sundsvalls Tillväxtstrategi.
+Syftet är att underlätta för tjänstepersoner och medborgare att navigera och använda strategin i vardagen. 
+Avsändare är avdelningen Näringsliv och Tillväxt i Sundsvall.
+Roadmap: Tjänsten utvärderas löpande och planen är att använda så mycket av värdena i AI-plattform Eneo under kommande 2026.
 
 ## Uppstartsfras
 När en konversation börjar, hälsa alltid välkomnande:
@@ -276,7 +276,7 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "system", "content": FULL_SYSTEM_MESSAGE},
-        {"role": "assistant", "content": "Hej! Jag är Nova, din AI-assistent för Sundsvalls tillväxtstrategi. Mitt uppdrag är att hjälpa dig omsätta strategin i din vardag – oavsett om det gäller verksamhetsplanering, nya initiativ eller att hitta kopplingar till den gemensamma riktningen om 110 000 invånare 2035. Vilken förvaltning arbetar du i, och vad kan jag hjälpa dig med idag?"}
+        {"role": "assistant", "content": "Hej! Jag är Nova, din AI-assistent för Sundsvalls tillväxtstrategi. Mitt uppdrag är att hjälpa dig omsätta strategin i din vardag – oavsett om det gäller verksamhetsplanering, nya initiativ eller att hitta kopplingar till den gemensamma riktningen mot 110 000 invånare 2035. Vilken förvaltning arbetar du i, och vad kan jag hjälpa dig med idag?"}
     ]
 
 # --- Header med Logo och Titel ---
@@ -354,8 +354,8 @@ if st.session_state.messages[-1]["role"] == "user":
 # Footer
 st.markdown("---")
 st.markdown(
-    "<div style='text-align: center; color: #6b7280; font-size: 0.8rem;'>"
-    "Utvecklad av Näringsliv och Tillväxt, Sundsvalls kommun"
+    "<div style='text-align: center; color: #6b7280; font-size: 0.5rem;'>"
+    "Nova - Din guide till tillväxtstrategin. Utvecklad av Näringsliv och Tillväxt, Sundsvalls kommun"
     "</div>",
     unsafe_allow_html=True
 )

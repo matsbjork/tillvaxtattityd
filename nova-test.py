@@ -71,8 +71,17 @@ st.markdown("""
     #MainMenu {visibility: hidden;}
     .stDeployButton {display:none;}
     
-    /* Dölj 'Made with Streamlit' footern */
-    footer {visibility: hidden;}
+    /* Dölj 'Made with Streamlit' footern - FÖRSTÄRKT VERSION */
+    footer {visibility: hidden !important;}
+    footer:after {
+        content:''; 
+        visibility: hidden;
+        display: none;
+    }
+    
+    /* Extra säkerhet för att dölja Streamlit footer */
+    .streamlit-footer {display: none !important;}
+    [data-testid="stBottomBlockContainer"] {display: none !important;}
     
     /* Dölj den övre färgade linjen/headern om du vill ha det helt rent */
     header {visibility: hidden;}
@@ -189,8 +198,8 @@ Avsluta relevanta svar med en kort, motiverande uppmaning som driver på tillvä
 
 ## Nedladdning
 Om användaren frågar "Hur laddar jag ner strategin?" eller liknande om att ladda ner dokumentet, svara:
-"Här är länken till strategin på sundsvall.se:"
-[Tillväxtstrategi_KS-2025-00512_2025-10-06.pdf](https://sundsvall.se/download/18.501dfcc1199c917ddb79bae8/1760512627484/Tillv%C3%A4xtstrategi_KS-2025-00512_2025-10-06.pdf)
+"Jamen självklart! Här är länken:"
+[Tillväxtstrategi_KS-2025-00512_2025-10-06.pdf](https://sundsvall.se/download/18.3e85292193b0a7082729e2/1734346766467/Tillvaxtstrategi_KS-2025-00512_2025-10-06.pdf)
 """
 
 # KUNSKAPSBAS (STRATEGI - FULLSTÄNDIG)
@@ -451,7 +460,7 @@ if st.session_state.messages[-1]["role"] == "user":
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #6b7280; font-size: 0.8rem;'>"
-    "Nova - Din guide till tillväxtstrategin. Utvecklad av Näringsliv och Tillväxt, Sundsvalls kommun. 12021038"
+    "Nova - Din guide till tillväxtstrategin. Utvecklad av Näringsliv och Tillväxt, Sundsvalls kommun"
     "</div>",
     unsafe_allow_html=True
 )

@@ -1,5 +1,7 @@
 # Nova – AI-assistent för Sundsvalls Tillväxtstrategi
 
+2026-02-15: Experimentet är över. Arkiverar denna :) Kul.
+
 Detta är källkoden för **www.tillvaxtattityd.se**. Applikationen är en prototyp byggd i Python med Streamlit för att hjälpa Sundsvalls kommuns tjänstepersoner att interagera med tillväxtstrategin.
 
 Webbplatsen fungerar som en brygga innan migrering sker till kommunens egna plattform Eneo.
